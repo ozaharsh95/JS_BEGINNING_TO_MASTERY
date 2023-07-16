@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Functions
+        /*
+        function sing(){
+            console.log("Mai hu gian mai hu bada takatvar mai hu surila");
+        }
+
+        sing();
+
+        const ring=function(){
+            console.log("trin trin trin.....");
+        }
+        ring();
+
+        function add1(n1,n2,n3){
+            return n1+n2+n3;
+        }
+        const add2=function(n1,n2,n3){
+            return n1+n2+n3;
+        }
+        const add3=(n1,n2,n3)=>{
+            return n1+n2+n3;
+        }
+        console.log(add1(2,3,4)+" "+add2(2,3,4)+" "+add3(2,3,4));
+        */
+
+
+        //Hoisting
+        //function ne declare karya pela call karavu
+
+        // hello();
+        // function hello(){
+        //     console.log("Hello ji ha ah a....");
+        // }
+
+
+        //lexical scope
+        //potanama value na made to parent function ma value find kare
+        /*
+        var vbn=5;
+        function parent(){
+            
+            function child(){
+                const fun=()=>{
+                    console.log(vbn+" inside fun");
+                }
+                console.log(vbn+' isnide child');
+                fun();
+            }
+            console.log(vbn+" inside parent");
+            child();
+        }
+        parent();
+        */  
+
+
+        //default parameter
+        // function func(a,b=5){
+        //     return a+b;
+        // }
+        // console.log(func(5,7));
+        // console.log(5);
+
+        //object passing in function
+        /*
+        const obj={
+            name:"Harsh",
+            surname:'oza',
+            age:20
+        };
+
+        function f(obj){
+            console.log(obj.name+" "+obj.surname+" "+obj.age);
+        }
+        f(obj);
+
+        function f1({name:n,surname:s,age:a}){
+            console.log(n+" "+s+" "+a);
+        }
+        f1(obj);
+        */
+
+        //callback function
+        /*
+        function myfunc(){
+            console.log("Inside the deeply myfunc");
+        }
+
+        function myfunc2(callback){
+            console.log("Inside the myfunc2");
+            callback();
+        }
+
+        myfunc2(myfunc);
+        */
+        
+
+        //function returning function
+
+        function myfunc(){
+            function hello(){
+                console.log("Hello sir...!");
+            }
+
+            return hello;
+        }
+
+        const ans=myfunc();
+        console.log(ans);
+        ans();
+
+
+    </script>
+</body>
+</html>

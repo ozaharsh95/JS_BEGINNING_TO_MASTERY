@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(230, 170, 189);
+            color: rgb(219, 66, 66);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: medium;
+        }
+        .dabbo{
+            height: 500px;
+            width: 50%;
+            margin: 10px 10px;
+            padding: 10px 10px;
+            border: 2px solid yellow;
+            border-radius: 5%;
+            box-shadow: 5px 5px honeydew;
+        }
+    </style>
+</head>
+<body>
+    <h1>PART1 of Javascript of JSMASTERY</h1>
+    <div class="dabbo">
+
+        <ul>
+            <li>Variables</li>
+        </ul>
+        <h2>visits : rivisons</h2>
+        <li>25-6-23</li>
+    </div>
+    <script>
+        //Naming Rules:
+        /*
+            1. can't start with numbers
+            2. space na chale
+            3. _ ke $ chale
+
+        */
+
+
+        //Scope of Variables
+        /*
+        var -> globally
+        let and const -> within block
+
+
+        for var->
+
+        var g ="cool";         -> scope global
+
+        function newFunc(){    -> scope within function
+            var h ="cool1";
+        }
+        */
+
+
+
+        //strings
+
+        // let str="Harsh Oza";
+        //       012345678
+        // console.log(str[3]);
+        // console.log(str.length);
+        // console.log(str.substring(0,4));
+        // console.log(str.slice(0,4));
+
+        // let str1="   VIJAYKUMAR    ";
+        // let trimmered = str1.trim();
+
+        // console.log(str.toUpperCase());
+        // console.log(str.toLowerCase());
+
+        
+        //typeof operator
+        // let age=22;
+        // let weight=3.45;
+        // let string="Nareshbhai";
+        // console.log(typeof(age));
+        // console.log(typeof(weight));
+        // console.log(typeof(string));
+
+        //NUMBER TO STRING
+        // let a=34;
+        // a=a+" ";
+        //or
+        //a=String(a);
+        
+
+        //STring to NUMBER
+        // let trr="567";
+        // trr=Number(trr);
+
+        //String Concatenation
+        // let s1="Harsh";
+        // let s2="Oza";
+        // let s3=s1+" "+s2;
+        // console.log(s3);
+
+        //Template Strings
+
+        // let name="harsh";
+        // let cast="oza";
+        // console.log(`hello Mr.${name} ${cast} welcome to myworld..!`);
+
+
+
+        //== V/S ===
+        /*
+        let n1=7;
+        let n2="7";
+
+        console.log(n1==n2);  //by value check kare
+        console.log(n1===n2); // by value+ by data type check kare
+        console.log(n1!=n2);
+        console.log(n1!==n2)
+        
+        */
+
+
+        //Primitive v/s reference data type
+        /*
+        let n1=6;
+        let n2=n1;
+        console.log(n1+" "+n2);
+        n1++;
+        console.log(n1+" "+n2);
+        */
+        //primitive data type ma banne variable ne memroy made chhe
+        //stack memory
+
+
+        /*
+        let a1=["a","b"];
+        let a2=a1;
+        console.log(a1+" and "+a2);
+        a1.push("c");
+        console.log(a1+" and "+a2);
+        */
+        /*
+            reference data type ma data heap ma store chhe
+            variable pase khali addresss j hoy chhe
+
+            ahiya a1 and a2 have same heap memory address
+        */
+
+        /*
+        let c1=['a','b'];
+        let c0=['a','b'];
+        //or
+        let c2=c1.slice(0);
+        //or
+        let c3=[].concat(c1);
+        //or spread operator
+        let c4=[...c1];
+
+        console.log(c1+" "+c0+" "+c2+" "+c3+" "+c4);
+
+        c1.push('c');
+        console.log(c1===c0);
+        console.log(c1===c2);
+        console.log(c1===c3);
+        console.log(c1===c4);
+        */
+        
+        
+    </script>
+
+</body>
+</html>

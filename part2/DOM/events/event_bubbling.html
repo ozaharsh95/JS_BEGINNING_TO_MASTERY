@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>EVENT BUBBLING | CAPTURING | DELEGATION</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        main{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .box{
+            min-width:100px;
+            min-height: 100px;
+            padding: 5rem;
+            color:#fff;
+            font-weight: bold;
+            font-size: 2rem;
+            cursor: pointer;
+            text-align: center;
+        }
+        .grandparent{
+            background-color: #b1d4e0;
+            color: black;
+            border:2px solid red;
+        }
+        .parent{
+            background-color: #0c2d48;
+            border:2px solid green;
+        }
+        .child{
+            background: darkblue;
+            border:2px solid #fff;
+        }
+    </style>
+    <script src="./eventBubbling9.js" defer></script>
+    <!-- <script src="./practise.js" defer></script> -->
+</head>
+<body>
+    <main>
+        <div class="grandparent box">
+            Dada
+            <div class="parent box">
+                Papa
+                <div class="child box">
+                    Hu
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

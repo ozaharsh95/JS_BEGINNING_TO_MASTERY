@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        //LOOPS IN ARRAYS
+        /*
+        const fruits=['apple','gauva','pineapple','mango'];
+        fruits.push('watermelon');
+        console.log(fruits);
+
+        //for of loop
+        for(let f of fruits){
+            console.log(f);
+        }
+
+
+        //for in loop
+        for(let i in fruits){
+            console.log(fruits[i]);
+        }*/
+
+
+        //ARRAY DESTRUCTURING
+        /*
+        const myarr=["amit","sumit"];
+        let v1=myarr[0];
+        let v2=myarr[1];
+        console.log(v1+"   "+v2);
+        //or
+        let [a1,a2]=myarr;
+        console.log(a1+"   "+a2);
+        */
+        /*
+        const arr=[1,2,3];
+        let [a1,a2]=arr;
+        console.log(a1+" "+a2);
+        let[b1, ,b3]=arr;
+        console.log(b1+" "+b3);
+        let[c1,c2,c3,c4]=arr;
+        console.log(c1+" "+c2+" "+c3+" "+c4);
+        */
+
+
+
+        //OBJECTS (reference data type)
+
+        // const person={
+        //     name:'Harsh',
+        //     age:20,
+        //     gender:'female'
+        // };
+        // console.log(person);
+
+        //to add key value pair in object
+
+        // person.surname="oza";
+        // console.log(person);
+
+        //accessing key value
+        /*
+        console.log(person.name+" "+person.surname);
+        console.log(person["name"]+" "+person["surname"]);
+        */
+
+        //exception for space vadi key
+        /*
+        const obj={
+            "person hobbies":'cricket'
+            //" space vadi key"
+        }
+
+        console.log(obj['person hobbies']);
+        */
+
+
+
+        //for in loop
+        /*
+        for(let key in person){
+            console.log(key+'  '+person[key]);
+        }
+        */
+
+        //Object.keys(object_name)
+        /*
+        console.log(Object.keys(person));
+        for(let key of Object.keys(person)){
+            console.log(person[key]);
+        }
+        */
+
+
+        //object banavani navi rit
+        /*
+        const key1="name";
+        const key2="surname";
+        const value1="harsh";
+        const value2="oza";
+
+        const obj={
+            [key1]:value1,
+            [key2]:value2
+        }
+
+        console.log(obj);
+        */
+
+        //Spread operator
+        /*
+        //Array
+        const arr1=[1,2,3];
+        const arr2=[4,5,6];
+        const arr3=[...arr1,...arr2,7,8,9];
+        console.log(arr3);
+
+        //Object
+        const obj1={
+            key1:'v1',
+            key2:'v2'
+        };
+        const obj2={
+            key3:'v3',
+            key4:'v4'
+        };
+        const obj3={...obj1,...obj2};
+        console.log(obj3);
+        */  
+
+
+        //Object destructuring
+        
+        const obj={
+            name:"Harsh",
+            surnmae:"Oza"
+        };
+        let v1=obj.name;
+        let v2=obj.surnmae;
+        console.log(v1+" "+v2);
+        const{name,surnmae}=obj;
+        console.log(name+" "+surnmae);
+        const{name:n1,surnmae:s1}=obj;
+        console.log(n1+" "+s1);
+
+
+        //Objects inside arrays
+        const users=[
+            {userId:1,userName:'Munshi1'},
+            {userId:2,userName:'Munshi2'},
+            {userId:3,userName:'Munshi3'}
+        ];
+
+        const [u1,u2,u3]=users;
+        //gives 3 objects
+        console.log(u1);
+        console.log(u2);
+        console.log(u3);
+        const[{userId},{userName}]=users;
+        console.log(userId+" "+userName);
+        const[{userId:uid1,userName:un1}, ,{userName:un3}]=users;
+        console.log(uid1+" "+un1+" "+un3);
+    </script>
+</body>
+</html>

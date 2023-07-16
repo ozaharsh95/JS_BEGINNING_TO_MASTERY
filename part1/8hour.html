@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Optional Chaining
+
+        const user={
+            firstName:"Harsh",
+            //while comment
+            // address:{houseNumber:'1234'}
+        }
+
+        console.log(user.firstName);
+        //while comment
+        //normal way
+        // console.log(user.address.housenumber);
+        /*Uncaught TypeError: Cannot read properties of undefined (reading 'housenumber')
+    at 8hour.html:18:34*/
+
+        // or
+        // mentos jindagi
+        console.log(user?.user?.housenumber );
+
+
+
+        //Methods
+        // in simple meaning functions inside object is a method
+
+
+        //this keyword
+        const person={
+            firstName:'Harsh',
+            age:80,
+            about:function(){
+                console.log(`Person name is ${this.firstName} and age is ${this.age}`);
+            }
+        }
+
+
+        person.about();
+
+
+        //example2
+        function personInfo(){
+            console.log(`My name is ${this.firstName} and age is ${this.age}`);
+        }
+
+        const user2={
+            firstName:'Munshi',
+            age:60,
+            about:personInfo
+        }
+
+        const user3={
+            firstName:'Chandan',
+            age:90,
+            about:personInfo
+        }
+
+        const user4={
+            firstName:'Harshil',
+            age:68,
+            about:personInfo
+        }
+
+        user2.about();
+        user3.about();
+        user4.about();
+
+
+        //go to 8_1.js
+    </script>
+
+</body>
+</html>
