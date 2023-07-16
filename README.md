@@ -182,4 +182,4 @@ This repository contains the my personal code notes for the **JavaScript Beginni
 
 ## Acknowledgments
 
-Special thanks to @harshitvee (Harshit Vashisth) for creating the "JavaScript Beginning to Mastery" course and providing valuable learning resources for the JavaScript community.
+Special thanks to [@harshitvee](https://github.com/harshitvee) (Harshit Vashisth) for creating the "JavaScript Beginning to Mastery" course and providing valuable learning resources for the JavaScript community.
