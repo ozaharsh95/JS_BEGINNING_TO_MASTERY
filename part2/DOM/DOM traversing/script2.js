@@ -1,21 +1,40 @@
-const rootNode=document.getRootNode();
+// Nodes -> element nodes, text nodes, comment nodes
+// elements -> only element nodes
 
-console.log(rootNode);
+// In dom 
+// root node    -> document
+// root element -> html
 
-const htmlElementNode=rootNode.childNodes[0];
+//root
+const root=document.getRootNode();
+console.log(root);
 
+//childrens of root node
+console.log(root.childNodes);
+console.log(root.children);
+
+
+//html element node
+const htmlElementNode=root.childNodes[0];
 console.log(htmlElementNode.childNodes);
- 
+
+//childrens of html node
 const headElementNode=htmlElementNode.childNodes[0];
 const textElementNode=htmlElementNode.childNodes[1];
 const 
 bodyElementNode=htmlElementNode.childNodes[2];
 
-//parent
-console.log(headElementNode.parentNode);
+// Traversing to parent
+console.log(headElementNode.parentElement);
+console.log(bodyElementNode.parentNode);
 
-//sibling 
+
+//Traversing to sibling next or previous
+
 console.log(headElementNode.nextSibling);
+console.log(headElementNode.nextElementSibling);
+console.log(bodyElementNode.previousSibling);
+console.log(bodyElementNode.previousElementSibling);
 
 
 
