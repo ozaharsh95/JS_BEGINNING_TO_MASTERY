@@ -3,6 +3,8 @@
 
 This repository contains the my personal code notes for the **JavaScript Beginning to Mastery** course by Harshit Vashisth, a YouTube educator. The course covers various topics in JavaScript, starting from the basics and progressing towards more advanced concepts. 
 
+> DISCLAIMER: File structure may be absurd, clumsy, and have multilingual comments that make it harder to understand.
+
 ## Course Topics
 
 ### Basics of Programming in JavaScript
