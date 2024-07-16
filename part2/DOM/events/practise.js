@@ -89,3 +89,40 @@ form.addEventListener("submit",(e)=>{
 
 
 */
+
+const submitBtn = document.querySelector('.form-todo').querySelector('input[type="submit"]')
+const inputText = document.querySelector('.form-todo').querySelector('input[type="text"]')
+const ul = document.querySelector('.todo-list')
+
+submitBtn.addEventListener('click',(e)=>{
+    e.preventDefault()
+    const inputTextFromElement = inputText.value 
+    if(!inputTextFromElement||inputTextFromElement.length===0){
+        return
+    }
+    const newLi = document.createElement('li')
+    newLi.innerHTML += `
+          <span class="text">${inputTextFromElement}</span>
+          <div class="todo-buttons">
+            <button class="todo-btn done">Done</button>
+            <button class="todo-btn remove">Remove</button>
+          </div>
+          `;
+    ul.append(newLi)
+
+    const allLi = ul.querySelectorAll('li')
+    allLi.forEach((btn)=>{
+        const doneBtn = btn.querySelector('.done')
+        const removeBtn = btn.querySelector('.remove')
+        const text = btn.querySelector('.text')
+        
+        doneBtn.addEventListener('click',(e)=>{
+            text.style.textDecoration = 'line-through'
+        })
+        removeBtn.addEventListener('click',(e)=>{
+            btn.remove()
+        })
+    })
+
+    inputText.value = ''
+})
