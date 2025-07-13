@@ -1,52 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-        body{
-            background-color: rgb(230, 170, 189);
-            color: rgb(219, 66, 66);
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            font-size: medium;
-        }
-        .dabbo{
-            height: 500px;
-            width: 50%;
-            margin: 10px 10px;
-            padding: 10px 10px;
-            border: 2px solid yellow;
-            border-radius: 5%;
-            box-shadow: 5px 5px honeydew;
-        }
+      body {
+        background-color: rgb(230, 170, 189);
+        color: rgb(219, 66, 66);
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        font-size: medium;
+      }
+      .dabbo {
+        height: 500px;
+        width: 50%;
+        margin: 10px 10px;
+        padding: 10px 10px;
+        border: 2px solid yellow;
+        border-radius: 5%;
+        box-shadow: 5px 5px honeydew;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <h1>PART1 of Javascript of JSMASTERY</h1>
     <div class="dabbo">
-
-        <ul>
-            <li>Variables</li>
-        </ul>
-        <h2>visits : rivisons</h2>
-        <li>25-6-23</li>
-        <li>29-5-24</li>
-        <li>15-7-24</li>
+      <ul>
+        <li>Variables</li>
+      </ul>
+      <h2>visits : rivisons</h2>
+      <li>25-6-23</li>
+      <li>29-5-24</li>
+      <li>15-7-24</li>
+      <li>12-7-25 & 13-7-25</li>
     </div>
     <script>
-        //Naming Rules:
-        /*
+      //Naming Rules:
+      /*
             1. can't start with numbers
             2. space na chale
             3. _ ke $ chale
 
         */
 
-
-        //Scope of Variables
-        /*
+      //Scope of Variables
+      /*
         var -> globally
         let and const -> within block
 
@@ -60,59 +59,120 @@
         }
         */
 
+      //strings
 
+      // let str="Harsh Oza";
+      //       012345678
+      // console.log(str[3]);
+      // console.log(str.length);
+      // console.log(str.substring(0,4));
+      // console.log(str.slice(0,4));
 
-        //strings
+      // let str1="   VIJAYKUMAR    ";
+      // let trimmered = str1.trim();
 
-        // let str="Harsh Oza";
-        //       012345678
-        // console.log(str[3]);
-        // console.log(str.length);
-        // console.log(str.substring(0,4));
-        // console.log(str.slice(0,4));
+      // console.log(str.toUpperCase());
+      // console.log(str.toLowerCase());
 
-        // let str1="   VIJAYKUMAR    ";
-        // let trimmered = str1.trim();
+      //typeof operator
+      // let age=22;
+      // let weight=3.45;
+      // let string="Nareshbhai";
+      // console.log(typeof(age));
+      // console.log(typeof(weight));
+      // console.log(typeof(string));
 
-        // console.log(str.toUpperCase());
-        // console.log(str.toLowerCase());
+      // NUMBER TO STRING
+      // let a = 34;
+      // a = a + " ";
+      // or
+      // String(x)
+      // a = String(a);
+      // or
+      // x.toString()
+      // a = a.toString();
+      // or
+      // Template literal
+      // a = `${a}`;
 
-        
-        //typeof operator
-        // let age=22;
-        // let weight=3.45;
-        // let string="Nareshbhai";
-        // console.log(typeof(age));
-        // console.log(typeof(weight));
-        // console.log(typeof(string));
+      // STRING to NUMBER
+      // let trr="567";
+      // Number(x)
+      // trr=Number(trr);
+      // let trr1 = "56.7890";
+      // parseInt(x)
+      // console.log(parseInt(trr1));
+      // parseFloat(x)
+      // console.log(parseFloat(trr1));
+      // Unary '+' operator
+      // console.log(+trr1);
 
-        //NUMBER TO STRING
-        // let a=34;
-        // a=a+" ";
-        //or
-        //a=String(a);
-        
+      // What if string it's not a valid number?
 
-        //STring to NUMBER
-        // let trr="567";
-        // trr=Number(trr);
+      //   let str3 = "HarshOza";
 
-        //String Concatenation
-        // let s1="Harsh";
-        // let s2="Oza";
-        // let s3=s1+" "+s2;
-        // console.log(s3);
+      //   console.log(Number(str3)); // NaN
+      //   console.log(parseInt(str3)); // NaN
+      //   console.log(+str3); // NaN
 
-        //Template Strings
+      //   let isNum = Number.isNaN(Number("abc")); // true
+      //   console.log(isNum);
 
-        // let name="harsh";
-        // let cast="oza";
-        // console.log(`hello Mr.${name} ${cast} welcome to myworld..!`);
+      // + Operator with "" (Empty String)
 
+      // If either operand is a string, + performs string concatenation.
 
+      /*
+      console.log("" + 5);
+      console.log(5 + "");
+      console.log("" + true);
+      console.log("" + null);
+      console.log("" + undefined);
+      */
 
-        //== V/S ===
-        /*
+      // The number, boolean, or other value is converted to a string, and then concatenated with the empty string.
+
+      // case 1
+      // console.log("" + 10 + 20 + 20); // "102020"
+      // case 2
+      // console.log(10 + 20 + 20 + ""); // 50
+
+      // String Concatenation
+      // let s1="Harsh";
+      // let s2="Oza";
+      // let s3=s1+" "+s2;
+      // console.log(s3);
+
+      // console.log("1" + 2 + 3); // 123
+      // console.log(1 + 2 + "3"); // 33
+
+      // Template Strings
+
+      // let name="harsh";
+      // let cast="oza";
+      // console.log(`hello Mr.${name} ${cast} welcome to myworld..!`);
+
+      // undefined
+      // 1. [Meaning]: A variable is declared but not assigned a value
+      // 2. [Type]: undefined (primitive)
+      // 3. [Set by]: JS engine
+      // 4. [Intent]: I don’t know yet.
+      // 5. [Used in]: Uninitialized variables, missing params, missing return
+
+      // null
+      // 1. [Meaning]: A variable is explicitly assigned "no value"
+      // 2. [Type]: object (this is a bug in JS)
+      // 3. [Set by]: Developer (usually manually)
+      // 4. [Intent]: There’s nothing here.
+      // 5. [Used in]: Explicitly clearing a value
+
+      /*
+      console.log(null + 1); // 1  (null is coerced to 0)
+      console.log(undefined + 1); // NaN (undefined can't be converted to number)
+      */
+
+      //== V/S ===
+      /*
         let n1=7;
         let n2="7";
 
@@ -123,34 +183,32 @@
         
         */
 
-
-        //Primitive v/s reference data type
-        /*
+      //Primitive v/s reference data type
+      /*
         let n1=6;
         let n2=n1;
         console.log(n1+" "+n2);
         n1++;
         console.log(n1+" "+n2);
         */
-        //primitive data type ma banne variable ne memroy made chhe
-        //stack memory
+      //primitive data type ma banne variable ne memroy made chhe
+      //stack memory
 
-
-        /*
+      /*
         let a1=["a","b"];
         let a2=a1;
         console.log(a1+" and "+a2);
         a1.push("c");
         console.log(a1+" and "+a2);
         */
-        /*
+      /*
             reference data type ma data heap ma store chhe
             variable pase khali addresss j hoy chhe
 
             ahiya a1 and a2 have same heap memory address
         */
 
-        /*
+      /*
         let c1=['a','b'];
         let c0=['a','b'];
         //or
@@ -168,9 +226,6 @@
         console.log(c1===c3);
         console.log(c1===c4);
         */
-        
-        
     </script>
-
-</body>
+  </body>
 </html>
