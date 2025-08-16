@@ -1,51 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <script>
-        //Functions
-        /*
-        function sing(){
-            console.log("Mai hu gian mai hu bada takatvar mai hu surila");
-        }
+      //Functions
 
-        sing();
+      /*
+      // FUNCTION DECLARATION
+      function sing() {
+        console.log("Mai hu gian mai hu bada takatvar mai hu surila");
+      }
 
-        const ring=function(){
-            console.log("trin trin trin.....");
-        }
-        ring();
+      sing();
 
-        function add1(n1,n2,n3){
-            return n1+n2+n3;
-        }
-        const add2=function(n1,n2,n3){
-            return n1+n2+n3;
-        }
-        const add3=(n1,n2,n3)=>{
-            return n1+n2+n3;
-        }
-        console.log(add1(2,3,4)+" "+add2(2,3,4)+" "+add3(2,3,4));
-        */
+      // FUNCTION EXPRESSION
+      const ring = function () {
+        console.log("trin trin trin.....");
+      };
+      ring();
 
+      function add1(n1, n2, n3) {
+        return n1 + n2 + n3;
+      }
+      const add2 = function (n1, n2, n3) {
+        return n1 + n2 + n3;
+      };
 
-        //Hoisting
-        //function ne declare karya pela call karavu
+      // ARROW FUNCTION
+      const add3 = (n1, n2, n3) => {
+        return n1 + n2 + n3;
+      };
+      console.log(add1(2, 3, 4) + " " + add2(2, 3, 4) + " " + add3(2, 3, 4));
+      */
 
-        // hello();
-        // function hello(){
-        //     console.log("Hello ji ha ah a....");
-        // }
+      // Hoisting
+      //function ne declare karya pela call karavu
 
+      // case1: function declaration
+      // function ne declare karya ni upper call kari sakay chhe | [IN OTHER WORDS] -> full hoisted -> can be called before declaration
 
-        //lexical scope
-        //potanama value na made to parent function ma value find kare
-        /*
+      // example:
+      // hello();
+      // function hello() {
+      //   console.log("Hello ji ha ah a....");
+      // }
+
+      // case2: function expression
+      // Not hoisted as a function. The variable gets hoisted but is undefined until assignment.
+
+      // example:
+
+      // [CASE: A]
+      // With `var`, the variable is hoisted and initialized as undefined.
+      /*
+      console.log(ringBell); // undefined
+      ringBell(); // Reference error
+      var ringBell = function () {
+        console.log("RING BELL");
+      };
+      */
+
+      // [CASE: B And C]
+      // let/const, the variable is hoisted but not initialized (Temporal Dead Zone).
+      /*
+      console.log(ringBell); // ReferenceError: Cannot access 'ringBell' before initialization
+      ringBell(); // Reference error
+      let ringBell = function () {
+        console.log("RING BELL");
+      };
+      */
+
+      // case3: arrow function will behave same as function expression
+
+      // lexical scope
+      //potanama value na made to parent function ma value find kare
+      /*
         var vbn=5;
         function parent(){
             
@@ -60,18 +94,17 @@
             child();
         }
         parent();
-        */  
+        */
 
+      //default parameter
+      // function func(a,b=5){
+      //     return a+b;
+      // }
+      // console.log(func(5,7));
+      // console.log(5);
 
-        //default parameter
-        // function func(a,b=5){
-        //     return a+b;
-        // }
-        // console.log(func(5,7));
-        // console.log(5);
-
-        //object passing in function
-        /*
+      //object passing in function
+      /*
         const obj={
             name:"Harsh",
             surname:'oza',
@@ -89,8 +122,8 @@
         f1(obj);
         */
 
-        //callback function
-        /*
+      //callback function
+      /*
         function myfunc(){
             console.log("Inside the deeply myfunc");
         }
@@ -102,23 +135,20 @@
 
         myfunc2(myfunc);
         */
-        
 
-        //function returning function
+      //function returning function
 
-        function myfunc(){
-            function hello(){
-                console.log("Hello sir...!");
-            }
-
-            return hello;
+      function myfunc() {
+        function hello() {
+          console.log("Hello sir...!");
         }
 
-        const ans=myfunc();
-        console.log(ans);
-        ans();
+        return hello;
+      }
 
-
+      const ans = myfunc();
+      console.log(ans);
+      ans();
     </script>
-</body>
+  </body>
 </html>
