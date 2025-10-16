@@ -1,17 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+
+  <body>
     <script>
-       let arr = [12,23,45,67]
+      /*
+    Level 2 — Medium
 
-       console.log(arr.__proto__==Array.prototype);
-       console.log(arr.__proto__.__proto__==Object.prototype);
+Given [1, 2, 3, 4, 5], keep only even numbers and return their squares.
 
+Given [1, -1, 2, -3, 4], return the sum of all positive numbers.
+
+Given [1, 2, 3, 4, 5], replace elements from index 1 to 3 with 0.
+    
+    */
+
+      const arr1 = [1, 2, 3, 4, 5];
+      const ans1 = arr1
+        .filter((item) => item % 2 == 0)
+        .map((item) => item * item);
+
+      console.log(ans1);
+
+      const arr2 = [1, -1, 2, -3, 4];
+      const ans2 = arr2.filter((item) => item > 0).map((item) => item * item);
+
+      console.log(ans2);
+
+      const arr3 = [1, 2, 3, 4, 5];
+
+      arr3[1] = arr3[2] = arr3[3] = 0;
+
+      console.log(arr3);
+
+      /*
+      
+      Level 3 — Harder
+
+Given ["apple", "banana", "kiwi", "grape"], return a new array sorted by word length.
+
+Given ["apple", "banana", "apple", "orange", "banana", "apple"], return an object with the count of each word.
+
+Given [1, 2, 2, 3, 4, 4, 5], return a new array without duplicates.
+      
+      */
+
+      const arr4 = ["apple", "banana", "kiwi", "grape"];
+
+      const ans4 = arr4.sort();
+
+      console.log(ans4);
+
+      const arr5 = ["apple", "banana", "apple", "orange", "banana", "apple"];
+
+      let ans5 = arr5.map((item) => {
+        return { [item]: arr5.filter((item2) => item2 == item).length };
+      });
+
+      console.log(ans5);
+
+      ans5 = [...new Set(ans5)];
+
+      console.log(ans5);
     </script>
-</body>
+  </body>
 </html>
