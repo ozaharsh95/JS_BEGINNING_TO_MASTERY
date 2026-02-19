@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -215,6 +215,36 @@
       const ans5 = [...new Set(arr5)];
 
       // case2: Arrya of Objects
+
+      // method-1:
+      // https://www.youtube.com/watch?v=4GZJ0DLIrWk
+
+      const duplicateArrayOfObj1 = [
+        { id: 1, value: 10 },
+        { id: 2, value: 11 },
+        { id: 2, value: 14 },
+        { id: 3, value: 12 },
+        { id: 3, value: 15 },
+        { id: 4, value: 13 },
+        { id: 4, value: 110 },
+      ];
+
+      function removeDuplicateElementsMethod1(arr) {
+        return arr.reduce((accumulator, current) => {
+          if (!accumulator.find((item) => item.id === current.id)) {
+            accumulator.push(current);
+          }
+          return accumulator;
+        }, []);
+      }
+
+      console.log(removeDuplicateElementsMethod1(duplicateArrayOfObj1));
+
+      function removeDuplicateElementsMethod2(arr) {
+        return [...new Map(arr.map((item) => [item.id, item])).values()];
+      }
+
+      console.log(removeDuplicateElementsMethod2(duplicateArrayOfObj1));
     </script>
   </body>
 </html>
