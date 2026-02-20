@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <main>
+      <h2>Topics</h2>
+      <ul>
+        <li>Optional Chaining</li>
+        <li>Nullish Coaleshing</li>
+      </ul>
+    </main>
+    <script>
+      // [1]
+      // OPTIONAL CHAINING
+
+      // a safe way to access nested properties or methods without throwing an error if something is null or undefined.
+
+      // 👉 It prevents errors like: Cannot read property 'x' of undefined
+
+      // The operator ?. stops evaluation if the value before it is null or undefined.
+
+      //example
+
+      const user = {
+        id: 1,
+        name: "harsh",
+        address: {
+          country: "India",
+        },
+      };
+
+      // without optional chaining
+      let city = user && user.address && user.address.city;
+      // with optional chain
+      let city1 = user?.address?.city;
+
+      // ❌ Cannot assign value using optional chaining
+      // user?.name = "Harsh"; // SyntaxError
+
+      // [2] ?? vs ||
+      // || (Logical OR operator)
+      // Returns the first truthy value.
+      // falsy values in js -> null,undefined,"",0,false,NaN
+
+      // loopcase in logical OR
+      // console.log(0 || 10); // 10
+      // here 0 is valid number yet treated as falsy value
+
+      // ?? (Nullish Coalescing)
+      // Returns the right side only if left side is null or undefined.
+      // It ignores other falsy values like 0 or "".
+      const value = 0 ?? 10;
+      console.log(value); // 0
+
+      // example-1
+      console.log(0 || 95); // 95
+      console.log(0 ?? 95); // 0
+
+      // example-2
+      console.log("" || "Harsh"); // "Harsh"
+      console.log("" ?? "Harsh"); // ""
+
+      // example-3
+      console.log(null || "Harsh1"); // Harsh1
+      console.log(null ?? "Harsh1"); // Harsh1
+
+      // example-4
+      console.log(undefined || "Harsh2"); // Harsh2
+      console.log(undefined ?? "Harsh2"); // Harsh2
+    </script>
+  </body>
+</html>
