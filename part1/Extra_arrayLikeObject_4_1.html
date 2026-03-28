@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array v/s Array like objects</title>
+  </head>
+  <body>
+    <script>
+      // Array v/s Array-like-objects
+
+      // 🧾 30-Second Interview Answer
+
+      // An array is a special JavaScript object with built-in methods like map, filter, and reduce, while an array-like object is a normal object with indexed elements and a length property but without array methods and full array behavior.
+
+      // Array-like-objects
+      // -> jeni pase length property hoy
+      // -> jene index thi access kari sakay chhe
+
+      const arrLikeObj1 = {
+        0: "first element",
+        1: "second element",
+        2: "third element",
+        length: 3,
+      };
+
+      // examples of array-like-object
+
+      // [1] arguments(object that hold passed arguments) of function
+      function testALO1() {
+        console.log(arguments);
+      }
+
+      testALO1(10, 20, 30);
+
+      // [2] DOM collections
+      // HTMLCollection and NodeList
+
+      // [3] strings
+
+      /*
+      ⚔️ Key Differences
+      Feature	    Array	                    Array-like Object
+      Type	      Real array	              Object
+      Methods	    ✅ map, filter, reduce	  ❌ Not available
+      Iterable	  ✅ Yes	                  ❌ Not always
+      Prototype	  Array.prototype	          Object.prototype
+      length	    ✅	                      ✅
+      */
+
+      // How to use array methods on array-like-object
+      // [1] converting to array
+      const arr1 = Array.from(arrLikeObj1);
+      // ahiya spread operator na use thay because array-like-object is not iterable
+
+      // 🎯 Interview-Level Insight
+
+      // 👉 Arrays are objects internally, but not all objects are arrays
+
+      // 👉 Array-like objects lack Array prototype methods
+    </script>
+  </body>
+</html>
